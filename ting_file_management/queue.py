@@ -13,6 +13,9 @@ class Queue:
 
     def dequeue(self):
         """Aqui irá sua implementação"""
+        first_item = self._data[0]
+        self._data.pop(0)
+        return first_item
 
     def search(self, index):
         """Aqui irá sua implementação"""
