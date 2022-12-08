@@ -17,8 +17,10 @@ def process(path_file, instance: Queue):
     print(file_info)
 
 
-def remove(instance):
+def remove(instance: Queue):
     """Aqui irá sua implementação"""
+    if not len(instance):
+        return print("Não há elementos")
 
 
 def file_metadata(instance, position):
