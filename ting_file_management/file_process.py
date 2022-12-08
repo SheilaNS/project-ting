@@ -21,6 +21,8 @@ def remove(instance: Queue):
     """Aqui irá sua implementação"""
     if not len(instance):
         return print("Não há elementos")
+    info = instance.dequeue()
+    print(f"Arquivo {info['nome_do_arquivo']} removido com sucesso")
 
 
 def file_metadata(instance, position):
