@@ -17,15 +17,15 @@ def exists_word(word, instance: Queue, is_content=False):
             for index, content in enumerate(data["linhas_do_arquivo"])
             if word.lower() in content.lower()
         ]
-        result_item = {
-            "palavra": word,
-            "arquivo": data["nome_do_arquivo"],
-            "ocorrencias": occurrences,
-        }
         if occurrences:
-            result.append(result_item)
+            result.append({
+                "palavra": word,
+                "arquivo": data["nome_do_arquivo"],
+                "ocorrencias": occurrences,
+            })
     return result
 
 
-def search_by_word(word, instance):
+def search_by_word(word, instance: Queue):
     """Aqui irá sua implementação"""
+    return exists_word(word, instance, True)
